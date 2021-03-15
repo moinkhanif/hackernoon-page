@@ -1,13 +1,16 @@
 import { useEffect, useState } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 import './App.css';
 import NavBar from './components/NavBar/NavBar';
+import { setColorScheme } from './redux';
 
 function App() {
   const [primaryNav, setPrimaryNav] = useState(true);
   const [scrollValue, setScrollValue] = useState(0);
   const [loginStatus, setLoginStatus] = useState(false);
   const [darkColor, setDarkColor] = useState(true);
-  const [colorScheme, setColorScheme] = useState('light');
+  const colorScheme = useSelector(state => state.siteData.colorScheme);
+  const dispatch = useDispatch();
 
   const handleScroll = () => {
     setScrollValue(window.scrollY);
@@ -18,7 +21,7 @@ function App() {
   };
 
   const toggleColorPreference = () => {
-    setColorScheme(color => (color === 'light' ? 'dark' : 'light'));
+    dispatch(setColorScheme(colorScheme === 'light' ? 'dark' : 'light'));
   };
 
   useEffect(() => {
@@ -46,7 +49,7 @@ function App() {
 
   useEffect(() => {
     const color = darkColor ? 'dark' : 'light';
-    setColorScheme(color);
+    dispatch(setColorScheme(color));
   }, [darkColor]);
 
   return (
