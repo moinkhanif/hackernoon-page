@@ -1,7 +1,110 @@
 .color-light {
-  background-color: rgb(255, 5, 5);
+  background-color: #0f0;
 }
 
 .color-dark {
-  background-color: rgb(129, 129, 129);
+  background-color: #0b0;
+}
+
+.h-menu {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 5px 10px 20px;
+}
+
+.hn-logo,
+.nav-right {
+  height: 40px;
+}
+
+.nav-right {
+  display: flex;
+}
+
+.search-form {
+  position: relative;
+  width: 250px;
+}
+
+.search-submit,
+.color-icon {
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-size: contain;
+  cursor: pointer;
+}
+
+.search-submit {
+  background-image: url('../../images/search.svg');
+  padding: 8px;
+  border: none;
+  margin: 10px;
+}
+
+.nav-right-menu-container {
+  margin-left: 15px;
+}
+
+.nav-right-menu,
+.search-form {
+  display: flex;
+  align-items: center;
+}
+
+.search-form,
+.menu-item {
+  margin-right: 10px;
+}
+
+.search-input::placeholder,
+.search-input {
+  color: #00b700;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.search-form .search-input {
+  padding: 8px;
+  width: 100%;
+  background-color: #003b00;
+}
+
+.search-form .search-submit {
+  position: absolute;
+  right: 0;
+}
+
+.search-submit span {
+  display: none;
+}
+
+.nav-right-menu .menu-item {
+  display: inline-block;
+  font-weight: bold;
+  font-size: 0.9rem;
+}
+
+.menu-item .menu-link {
+  color: #fff;
+  display: inline-block;
+  padding: 6px 13px;
+  border: 2px solid transparent;
+}
+
+.menu-item .menu-link:hover {
+  background-color: rgba(255, 255, 255, 0.418);
+}
+
+.menu-item.write-cta .menu-link,
+.menu-item.menu-profile:hover .menu-link {
+  border: 2px solid #000;
+}
+
+.menu-item.color-icon {
+  height: 40px;
+  width: 40px;
+}
+
+.color-icon.menu-sun {
+  background-image: url("../../images/sun.svg");
 }
