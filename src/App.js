@@ -2,13 +2,12 @@ import { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import './App.css';
 import NavBar from './components/NavBar/NavBar';
-import { setColorScheme } from './redux';
+import { setColorScheme, setPrimaryNav } from './redux';
 
 function App() {
-  const [primaryNav, setPrimaryNav] = useState(true);
   const [scrollValue, setScrollValue] = useState(0);
-  const [loginStatus, setLoginStatus] = useState(false);
   const [darkColor, setDarkColor] = useState(true);
+  const primaryNav = useSelector(state => state.siteData.primaryNav);
   const colorScheme = useSelector(state => state.siteData.colorScheme);
   const dispatch = useDispatch();
 
@@ -20,17 +19,11 @@ function App() {
     setDarkColor(color.matches);
   };
 
-  const toggleColorPreference = () => {
-    dispatch(setColorScheme(colorScheme === 'light' ? 'dark' : 'light'));
-  };
-
   useEffect(() => {
     window.addEventListener('scroll', handleScroll);
     handleColorScheme(window.matchMedia('(prefers-color-scheme: dark)'));
     window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', handleColorScheme);
 
-    // /Sample Use Of Login Status
-    setLoginStatus(false);
     return () => {
       window.removeEventListener('scroll', handleScroll);
       window.matchMedia('(prefers-color-scheme: dark)').removeEventListener('change', handleColorScheme);
@@ -40,10 +33,10 @@ function App() {
   useEffect(() => {
     if (scrollValue > 100) {
       if (primaryNav === true) {
-        setPrimaryNav(false);
+        dispatch(setPrimaryNav(false));
       }
     } else if (primaryNav === false) {
-      setPrimaryNav(true);
+      dispatch(setPrimaryNav(true));
     }
   }, [scrollValue]);
 
@@ -53,14 +46,9 @@ function App() {
   }, [darkColor]);
 
   return (
-    <div className="App">
+    <div className={`App ${colorScheme}`}>
       <header className="App-header">
-        <NavBar
-          primary={primaryNav}
-          loginStatus={loginStatus}
-          colorScheme={colorScheme}
-          toggleColorPreference={toggleColorPreference}
-        />
+        <NavBar />
       </header>
     </div>
   );
