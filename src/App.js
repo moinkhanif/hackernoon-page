@@ -17,6 +17,10 @@ function App() {
     setDarkColor(color.matches);
   };
 
+  const toggleColorPreference = () => {
+    setColorScheme(color => (color === 'light' ? 'dark' : 'light'));
+  };
+
   useEffect(() => {
     window.addEventListener('scroll', handleScroll);
     handleColorScheme(window.matchMedia('(prefers-color-scheme: dark)'));
@@ -48,7 +52,12 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <NavBar primary={primaryNav} loginStatus={loginStatus} colorScheme={colorScheme} />
+        <NavBar
+          primary={primaryNav}
+          loginStatus={loginStatus}
+          colorScheme={colorScheme}
+          toggleColorPreference={toggleColorPreference}
+        />
       </header>
     </div>
   );

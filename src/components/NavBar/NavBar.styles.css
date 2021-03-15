@@ -26,6 +26,10 @@
   width: 250px;
 }
 
+.label-name {
+  width: 100%;
+}
+
 .search-submit,
 .color-icon {
   background-color: transparent;
@@ -85,10 +89,17 @@
 }
 
 .menu-item .menu-link {
-  color: #fff;
   display: inline-block;
   padding: 6px 13px;
   border: 2px solid transparent;
+}
+
+.menu-item .menu-link.light {
+  color: #000;
+}
+
+.menu-item .menu-link.dark {
+  color: #fff;
 }
 
 .menu-item .menu-link:hover {
@@ -103,8 +114,36 @@
 .menu-item.color-icon {
   height: 40px;
   width: 40px;
+  margin-left: 10px;
+  border: none;
+  background-position: 0 0;
+  opacity: 1;
+}
+
+.color-icon.animate {
+  animation: colorChange 600ms alternate;
+}
+
+@keyframes colorChange {
+  0% {
+    opacity: 0.5;
+  }
+
+  50% {
+    background-position: 0 100px;
+    opacity: 0;
+  }
+
+  100% {
+    background-position: 0 0;
+    opacity: 1;
+  }
 }
 
 .color-icon.menu-sun {
   background-image: url("../../images/sun.svg");
+}
+
+.color-icon.menu-moon {
+  background-image: url("../../images/moon.svg");
 }
