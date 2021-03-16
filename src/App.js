@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import './App.css';
 import AppHeader from './components/AppHeader/AppHeader';
+import PostContent from './components/PostContent/PostContent';
 import { setColorScheme, setPrimaryNav } from './redux';
 
 function App() {
@@ -48,6 +49,7 @@ function App() {
   return (
     <div className={`App ${colorScheme}`}>
       <AppHeader />
+      <PostContent />
     </div>
   );
 }

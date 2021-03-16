@@ -1,0 +1,13 @@
+.post-container {
+  max-width: 1200px;
+  margin: auto;
+}
+
+.post-container .post-title {
+  text-align: center;
+  padding: 40px 0;
+  font-size: 2.1rem;
+  line-height: 1.5;
+  font-weight: bold;
+  word-spacing: 10px;
+}

@@ -1,3 +1,8 @@
 .label-name.hide {
   display: none;
 }
+
+.App.dark {
+  background-color: rgb(33, 36, 40);
+  color: #fff;
+}
