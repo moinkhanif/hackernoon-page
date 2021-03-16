@@ -9,7 +9,7 @@
 .h-menu {
   display: flex;
   justify-content: space-between;
-  padding: 11px 5px 11px 20px;
+  padding: 11px 5px 5px 20px;
 }
 
 .hn-logo,

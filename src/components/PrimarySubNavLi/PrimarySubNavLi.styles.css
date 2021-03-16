@@ -1,0 +1,87 @@
+.psub-nav-menu-item,
+.psub-link {
+  display: inline-block;
+}
+
+.psub-nav-menu-item {
+  margin: auto 10px;
+  padding: 8px 0;
+}
+
+.psub-nav-menu-item:hover {
+  background-color: rgba(255, 255, 255, 0.144);
+}
+
+.psub-link {
+  padding: 5px;
+  color: #fff;
+  font-weight: bold;
+  font-size: 0.8rem;
+}
+
+.sub-menu-container {
+  position: absolute;
+  padding: 30px 0;
+  display: none;
+  background-color: rgb(0, 34, 0);
+  left: 10%;
+  right: 10%;
+  margin-top: 8px;
+}
+
+.sub-menu-container .submenu-header {
+  padding-right: 30px;
+  position: relative;
+}
+
+.submenu-heading,
+.submenu-list-item-name {
+  color: #fff;
+}
+
+.submenu-header .submenu-heading {
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+.submenu-list-item-name {
+  font-size: 0.9rem;
+}
+
+.psub-nav-menu-item:hover .sub-menu-container,
+.sub-menu-container .submenu-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.submenu-ul {
+  border-left: 2px solid #0f0;
+  position: relative;
+}
+
+.submenu-header::after,
+.submenu-ul::before,
+.submenu-ul::after {
+  content: '';
+  position: absolute;
+  height: 2px;
+  width: 10px;
+  background-color: #0f0;
+}
+
+.submenu-header::after {
+  top: 50%;
+  right: 0;
+}
+
+.submenu-ul::before,
+.submenu-ul::after {
+  left: 0;
+}
+
+.submenu-ul .submenu-list-item {
+  text-align: left;
+  margin: 0 20px;
+  padding: 8px 0;
+}
