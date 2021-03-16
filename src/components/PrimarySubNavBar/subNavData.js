@@ -3,6 +3,7 @@ const navData = [
     id: 1,
     name: 'Read',
     link: '/tagged',
+    sponsor: true,
     subLinks: [
       {
         id: 1,
@@ -87,6 +88,7 @@ const navData = [
     id: 5,
     name: 'Learn',
     link: 'http://bit.ly/3rG0tZy',
+    sponsor: true,
     external: true,
     subLinks: [
       {
@@ -205,6 +207,7 @@ const navData = [
     id: 7,
     name: 'About',
     link: 'https://www.about.hackernoon.com/',
+    sponsor: true,
     external: true,
     subLinks: [
       {
@@ -278,6 +281,7 @@ const navData = [
     id: 8,
     name: 'Tech Companies',
     link: '/about-tech-company-news-pages-by-hacker-noon-uwu34bh',
+    sponsor: true,
     subLinks: [
       {
         id: 1,

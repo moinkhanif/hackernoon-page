@@ -42,7 +42,7 @@ const PrimarySubNavLi = ({ navElement }) => {
   };
 
   return (
-    <li className="psub-nav-menu-item">
+    <li className={`psub-nav-menu-item${navElement.sponsor ? ' sponsor' : ''}`}>
       <SubMenuAnchorTag
         name={navElement.name}
         link={navElement.link}
