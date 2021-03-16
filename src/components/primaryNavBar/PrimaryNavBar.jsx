@@ -47,12 +47,11 @@ const PrimaryNavBar = () => {
             <li className={`menu-item menu-profile ${loginStatus ? 'menu-profile-pic' : ''}`}>
               {loginStatus ? '' : <a href="./" className={`menu-link ${colorScheme}`}>Log in</a>}
             </li>
-            <li>
+            <li className="menu-item">
               <button
                 type="button"
-                className={`menu-item color-icon ${colorAnimate ? 'animate' : ''} ${colorScheme === 'light' ? 'menu-sun' : 'menu-moon'}`}
+                className={`color-icon ${colorAnimate ? 'animate' : ''} ${colorScheme === 'light' ? 'menu-sun' : 'menu-moon'}`}
                 onClick={handleColorInput}
-                onKeyPress={handleColorInput}
               >
                 <span />
               </button>

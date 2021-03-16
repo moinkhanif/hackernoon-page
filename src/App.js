@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import './App.css';
-import NavBar from './components/NavBar/NavBar';
+import AppHeader from './components/AppHeader/AppHeader';
 import { setColorScheme, setPrimaryNav } from './redux';
 
 function App() {
@@ -47,9 +47,7 @@ function App() {
 
   return (
     <div className={`App ${colorScheme}`}>
-      <header className="App-header">
-        <NavBar />
-      </header>
+      <AppHeader />
     </div>
   );
 }

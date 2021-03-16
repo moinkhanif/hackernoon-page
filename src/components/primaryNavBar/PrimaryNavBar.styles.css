@@ -9,7 +9,7 @@
 .h-menu {
   display: flex;
   justify-content: space-between;
-  padding: 10px 5px 10px 20px;
+  padding: 11px 5px 11px 20px;
 }
 
 .hn-logo,
@@ -46,13 +46,12 @@
 }
 
 .nav-right-menu-container {
-  margin-left: 15px;
+  margin-left: 20px;
 }
 
 .nav-right-menu,
 .search-form {
   display: flex;
-  align-items: center;
 }
 
 .search-form,
@@ -68,8 +67,9 @@
 }
 
 .search-form .search-input {
-  padding: 8px;
+  padding: 10px;
   width: 100%;
+  border: none;
   background-color: #003b00;
 }
 
@@ -90,7 +90,7 @@
 
 .menu-item .menu-link {
   display: inline-block;
-  padding: 6px 13px;
+  padding: 7px 13px;
   border: 2px solid transparent;
 }
 
@@ -111,9 +111,9 @@
   border: 2px solid #000;
 }
 
-.menu-item.color-icon {
-  height: 40px;
-  width: 40px;
+.menu-item .color-icon {
+  padding: 20px;
+  margin: auto;
   margin-left: 10px;
   border: none;
   background-position: 0 0;
