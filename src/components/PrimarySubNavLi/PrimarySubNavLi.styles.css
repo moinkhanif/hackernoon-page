@@ -32,6 +32,7 @@
 .sub-menu-container .submenu-header {
   padding-right: 30px;
   position: relative;
+  margin: 0 20px;
 }
 
 .submenu-heading,

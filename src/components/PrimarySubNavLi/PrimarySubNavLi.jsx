@@ -1,6 +1,7 @@
 /* eslint-disable react/jsx-key */
 /* eslint-disable react/prop-types */
 import PropTypes from 'prop-types';
+import SubMenuAnchorTag from '../SubMenuAnchorTag/SubMenuAnchorTag';
 import './PrimarySubNavLi.styles.css';
 
 const PrimarySubNavLi = ({ navElement }) => {
@@ -9,17 +10,29 @@ const PrimarySubNavLi = ({ navElement }) => {
       return (
         <div className="sub-menu-container">
           {subLinks.map(sMenu => (
-            <section className="submenu-section">
+            <section key={sMenu.id} className="submenu-section">
               <header className="submenu-header">
-                <a href={sMenu.link} className="submenu-heading">{sMenu.name}</a>
+                <SubMenuAnchorTag
+                  name={sMenu.name}
+                  link={sMenu.link}
+                  external={sMenu.external}
+                  classes="submenu-heading"
+                />
               </header>
-              <ul className="submenu-ul">
-                {sMenu.subLinks.map(listItem => (
-                  <li className="submenu-list-item">
-                    <a href={listItem.link} className="submenu-list-item-name">{listItem.name}</a>
-                  </li>
-                ))}
-              </ul>
+              {sMenu.subLinks && sMenu.subLinks.length > 0 ? (
+                <ul className="submenu-ul">
+                  {sMenu.subLinks.map(listItem => (
+                    <li key={listItem.id} className="submenu-list-item">
+                      <SubMenuAnchorTag
+                        name={listItem.name}
+                        link={listItem.link}
+                        external={listItem.external}
+                        classes="submenu-list-item-name"
+                      />
+                    </li>
+                  ))}
+                </ul>
+              ) : ''}
             </section>
           ))}
         </div>
@@ -30,14 +43,12 @@ const PrimarySubNavLi = ({ navElement }) => {
 
   return (
     <li className="psub-nav-menu-item">
-      <a
-        href={navElement.link}
-        rel="noreferrer"
-        target={navElement.external ? '_blank' : ''}
-        className="psub-link"
-      >
-        {navElement.name}
-      </a>
+      <SubMenuAnchorTag
+        name={navElement.name}
+        link={navElement.link}
+        external={navElement.external}
+        classes="psub-link"
+      />
       {subLinkMenu(navElement.subLinks)}
     </li>
   );
