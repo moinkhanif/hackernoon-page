@@ -9,7 +9,7 @@ const PostContent = () => {
 
   return (
     <div className="post-container">
-      <h1 className="post-title">{postData.title}</h1>
+      <h1 className="post-title">Hi{postData.title}</h1>
     </div>
   );
 };
