@@ -50,7 +50,7 @@ const PrimaryNavBar = () => {
             <li className="menu-item">
               <button
                 type="button"
-                className={`test color-icon ${colorAnimate ? 'animate' : ''} ${colorScheme === 'light' ? 'menu-sun' : 'menu-moon'}`}
+                className={`color-icon ${colorAnimate ? 'animate' : ''} ${colorScheme === 'light' ? 'menu-sun' : 'menu-moon'}`}
                 onClick={handleColorInput}
               >
                 <span />
