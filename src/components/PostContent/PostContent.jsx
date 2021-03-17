@@ -1,7 +1,8 @@
 import { useEffect, useState } from 'react';
-import postData from '../../data/postData.json';
+import { Helmet } from 'react-helmet';
 import Reactions from '../Reactions/Reactions';
 import SocialShares from '../SocialShares/SocialShares';
+import postData from '../../data/postData.json';
 import './PostContent.styles.css';
 
 const PostContent = () => {
@@ -36,36 +37,41 @@ const PostContent = () => {
   });
 
   return (
-    <main className="post-container">
-      <h1 className="post-title">{postData.title}</h1>
-      <div className="main-post-meta">
-        <div className="date-bookmark-container">
-          <a
-            className="post-date"
-            href={`/archives/${publishedYear}/${publishedMonth < 10 ? '0' : ''}${publishedMonth}/${publishedDate}`}
-          >
-            {`${publishedMonthName} ${ordinal(publishedDate)} ${publishedYear}`}
-          </a>
-          <span className="total-booksmarks">
-            <span className="star-icon" />
-            <span>750 reads</span>
-          </span>
-          <span className="bookmark-icon" />
+    <>
+      <Helmet>
+        <title>{`${postData.title} | HackerNoon`}</title>
+      </Helmet>
+      <main className="post-container">
+        <h1 className="post-title">{postData.title}</h1>
+        <div className="main-post-meta">
+          <div className="date-bookmark-container">
+            <a
+              className="post-date"
+              href={`/archives/${publishedYear}/${publishedMonth < 10 ? '0' : ''}${publishedMonth}/${publishedDate}`}
+            >
+              {`${publishedMonthName} ${ordinal(publishedDate)} ${publishedYear}`}
+            </a>
+            <span className="total-booksmarks">
+              <span className="star-icon" />
+              <span>750 reads</span>
+            </span>
+            <span className="bookmark-icon" />
+          </div>
+          <div className="post-reactions">
+            <Reactions reactionsData={postData.reactions} />
+          </div>
         </div>
-        <div className="post-reactions">
+        <img className="featured-image" src={postData.mainImage} alt="post related main pic" />
+        <div className="post-details" />
+        <div className="bottom-reactions">
           <Reactions reactionsData={postData.reactions} />
         </div>
-      </div>
-      <img className="featured-image" src={postData.mainImage} alt="post related main pic" />
-      <div className="post-details" />
-      <div className="bottom-reactions">
-        <Reactions reactionsData={postData.reactions} />
-      </div>
-      <div className="social-media-share-container">
-        <span className="social-media-share-text">Share this story</span>
-        <SocialShares />
-      </div>
-    </main>
+        <div className="social-media-share-container">
+          <span className="social-media-share-text">Share this story</span>
+          <SocialShares />
+        </div>
+      </main>
+    </>
   );
 };
 
