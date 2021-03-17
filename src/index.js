@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
+import { Helmet, HelmetProvider } from 'react-helmet-async';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
@@ -9,7 +10,12 @@ import store from './redux/store';
 ReactDOM.render(
   <Provider store={store}>
     <React.StrictMode>
-      <App />
+      <HelmetProvider>
+        <Helmet>
+          <title>Hacker Noon</title>
+        </Helmet>
+        <App />
+      </HelmetProvider>
     </React.StrictMode>
   </Provider>,
   document.getElementById('root'),

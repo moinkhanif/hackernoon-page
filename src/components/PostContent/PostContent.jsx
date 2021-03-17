@@ -1,9 +1,10 @@
 import { useEffect, useState } from 'react';
-import { Helmet } from 'react-helmet';
+import { Helmet } from 'react-helmet-async';
 import Reactions from '../Reactions/Reactions';
 import SocialShares from '../SocialShares/SocialShares';
 import postData from '../../data/postData.json';
 import './PostContent.styles.css';
+import RelatedContent from '../RelatedContent/RelatedContent';
 
 const PostContent = () => {
   const [publishedMonth, setPublishedMonth] = useState('');
@@ -29,12 +30,13 @@ const PostContent = () => {
   };
 
   useEffect(() => {
+    console.log('load');
     const postDate = new Date(postData.publishedAt * 1000);
     setPublishedMonth(postDate.getMonth() + 1);
     setPublishedDate(postDate.getDate());
     setPublishedYear(postDate.getFullYear());
     setPublishedMonthName(postDate.toLocaleString('default', { month: 'long' }));
-  });
+  }, []);
 
   return (
     <>
@@ -70,6 +72,7 @@ const PostContent = () => {
           <span className="social-media-share-text">Share this story</span>
           <SocialShares />
         </div>
+        <RelatedContent stories={postData.relatedStories} />
       </main>
     </>
   );
