@@ -44,8 +44,18 @@ const PostContent = () => {
           >
             {`${publishedMonthName} ${ordinal(publishedDate)} ${publishedYear}`}
           </a>
+          <span className="total-booksmarks">
+            <span className="star-icon" />
+            <span>750 reads</span>
+          </span>
+          <span className="bookmark-icon" />
+        </div>
+        <div className="post-reactions">
+          Reactions
         </div>
       </div>
+      <img className="featured-image" src={postData.mainImage} alt="post related main pic" />
+      <div className="post-details" />
     </main>
   );
 };

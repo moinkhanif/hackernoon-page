@@ -12,10 +12,59 @@
   word-spacing: 10px;
 }
 
+.main-post-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+}
+
+.total-booksmarks {
+  padding: 7px 10px;
+  background-color: rgba(202, 202, 202, 0.397);
+  margin: 0 10px;
+}
+
+.star-icon {
+  margin-right: 10px;
+  background-image: url('../../images/star.svg');
+}
+
+.bookmark-icon {
+  background-image: url('../../images/small-bookmark.svg');
+}
+
+.star-icon,
+.bookmark-icon {
+  display: inline-block;
+  padding: 9px;
+  vertical-align: text-bottom;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.dark .star-icon,
+.dark .bookmark-icon {
+  filter: invert(1);
+}
+
 .light .date-bookmark-container .post-date {
   color: #000;
 }
 
-.dark .date-bookmark-container .post-date {
+.dark .date-bookmark-container .post-date,
+.dark .total-booksmarks {
   color: #fff;
+}
+
+.featured-image {
+  width: 100%;
+  margin: 30px 0;
+  position: relative;
+  cursor: pointer;
+  transition: transform 200ms;
+}
+
+.featured-image:hover {
+  transform: scale(1.02);
 }
