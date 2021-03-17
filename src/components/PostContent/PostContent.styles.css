@@ -11,3 +11,11 @@
   font-weight: bold;
   word-spacing: 10px;
 }
+
+.light .date-bookmark-container .post-date {
+  color: #000;
+}
+
+.dark .date-bookmark-container .post-date {
+  color: #fff;
+}
