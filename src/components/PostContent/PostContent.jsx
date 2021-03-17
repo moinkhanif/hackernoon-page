@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import postData from '../../data/postData.json';
 import Reactions from '../Reactions/Reactions';
+import SocialShares from '../SocialShares/SocialShares';
 import './PostContent.styles.css';
 
 const PostContent = () => {
@@ -59,6 +60,10 @@ const PostContent = () => {
       <div className="post-details" />
       <div className="bottom-reactions">
         <Reactions reactionsData={postData.reactions} />
+      </div>
+      <div className="social-media-share-container">
+        <span className="social-media-share-text">Share this story</span>
+        <SocialShares />
       </div>
     </main>
   );

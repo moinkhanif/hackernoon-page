@@ -42,7 +42,11 @@ const PrimarySubNavLi = ({ navElement }) => {
   };
 
   return (
-    <li className={`psub-nav-menu-item${navElement.sponsor ? ' sponsor' : ''}`}>
+    <li
+      className={`psub-nav-menu-item${navElement.sponsor ? ' sponsor' : ''}`}
+      // eslint-disable-next-line jsx-a11y/no-noninteractive-tabindex
+      tabIndex="0"
+    >
       <SubMenuAnchorTag
         name={navElement.name}
         link={navElement.link}

@@ -71,4 +71,10 @@
 
 .bottom-reactions {
   text-align: center;
+  margin-bottom: 50px;
+}
+
+.social-media-share-container {
+  text-align: right;
+  margin: 20px 0;
 }

@@ -50,6 +50,8 @@
 }
 
 .psub-nav-menu-item:hover .sub-menu-container,
+.psub-nav-menu-item:active .sub-menu-container,
+.psub-nav-menu-item:focus .sub-menu-container,
 .sub-menu-container .submenu-section {
   display: flex;
   justify-content: center;
