@@ -68,3 +68,7 @@
 .featured-image:hover {
   transform: scale(1.02);
 }
+
+.bottom-reactions {
+  text-align: center;
+}

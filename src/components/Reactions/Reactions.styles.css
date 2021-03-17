@@ -1,0 +1,41 @@
+.reaction-icon {
+  padding: 14px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  filter: grayscale(1);
+  margin: 0 5px;
+  cursor: pointer;
+}
+
+.total-reactions {
+  margin-right: 12px;
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+
+.total-reactions,
+.reaction-icon {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.reaction-icon.heart {
+  background-image: url('../../images/heart.png');
+}
+
+.reaction-icon.bulb {
+  background-image: url('../../images/bulb.png');
+}
+
+.reaction-icon.boat {
+  background-image: url('../../images/boat.png');
+}
+
+.reaction-icon.money {
+  background-image: url('../../images/money.png');
+}
+
+.reaction-icon:hover,
+.reaction-icon.voted {
+  filter: grayscale(0);
+}

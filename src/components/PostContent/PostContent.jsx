@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import postData from '../../data/postData.json';
+import Reactions from '../Reactions/Reactions';
 import './PostContent.styles.css';
 
 const PostContent = () => {
@@ -51,11 +52,14 @@ const PostContent = () => {
           <span className="bookmark-icon" />
         </div>
         <div className="post-reactions">
-          Reactions
+          <Reactions reactionsData={postData.reactions} />
         </div>
       </div>
       <img className="featured-image" src={postData.mainImage} alt="post related main pic" />
       <div className="post-details" />
+      <div className="bottom-reactions">
+        <Reactions reactionsData={postData.reactions} />
+      </div>
     </main>
   );
 };
