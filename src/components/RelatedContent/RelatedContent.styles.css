@@ -25,6 +25,7 @@
 
 .tag-title::before {
   left: 0;
+  margin-right: 20px;
 }
 
 .tag-title::after {

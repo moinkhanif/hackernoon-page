@@ -5,6 +5,7 @@ import SocialShares from '../SocialShares/SocialShares';
 import postData from '../../data/postData.json';
 import './PostContent.styles.css';
 import RelatedContent from '../RelatedContent/RelatedContent';
+import PostTags from '../PostTags/PostTags';
 
 const PostContent = () => {
   const [publishedMonth, setPublishedMonth] = useState('');
@@ -72,6 +73,7 @@ const PostContent = () => {
           <SocialShares />
         </div>
         <RelatedContent stories={postData.relatedStories} />
+        <PostTags tags={postData.tags} />
       </main>
     </>
   );
