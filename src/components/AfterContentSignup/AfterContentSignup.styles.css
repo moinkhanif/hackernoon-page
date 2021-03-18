@@ -1,0 +1,38 @@
+.after-content-signup {
+  text-align: center;
+  margin: 50px 0;
+}
+
+.after-content-signup .sign-up-link {
+  display: inline-block;
+  padding: 20px;
+  border: 4px solid rgb(0, 255, 0);
+  font-size: 2rem;
+  margin: 20px 0;
+  font-weight: bolder;
+}
+
+.light .after-content-signup .sign-up-link {
+  background-color: rgb(33, 36, 40);
+  color: rgb(0, 255, 0);
+}
+
+.after-content-signup .sign-up-link:hover {
+  transform: scale(1.1);
+  opacity: 0.9;
+}
+
+.after-content-signup .glasses-icon {
+  margin-left: 20px;
+  display: inline-block;
+  height: 40px;
+  width: 40px;
+  background-image: url('../../images/glasses.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  vertical-align: middle;
+}
+
+.dark .after-content-signup .glasses-icon {
+  filter: grayscale(1) brightness(1.5);
+}

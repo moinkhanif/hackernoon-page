@@ -1,0 +1,37 @@
+.sponsored-bar {
+  text-align: center;
+  padding: 12px 0;
+}
+
+.sponsored-bar-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sponsored-bar .sponsored-image {
+  height: 25px;
+  width: 25px;
+}
+
+.sponsored-bar .sponsored-text {
+  margin-left: 10px;
+  font-weight: bold;
+  font-size: 0.8rem;
+}
+
+.dark .sponsored-bar {
+  background-color: rgb(102, 97, 5);
+}
+
+.light .sponsored-bar {
+  background-color: rgb(245, 236, 67);
+}
+
+.dark .sponsored-bar .sponsored-text {
+  color: rgb(245, 236, 67);
+}
+
+.light .sponsored-bar .sponsored-text {
+  color: rgb(102, 97, 5);
+}

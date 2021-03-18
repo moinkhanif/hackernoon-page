@@ -1,0 +1,61 @@
+footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 20px;
+}
+
+.light footer {
+  background-color: rgb(246, 247, 249);
+}
+
+.dark footer {
+  background-color: rgb(60, 60, 59);
+}
+
+.footer-ul {
+  margin: 5px;
+}
+
+.footer-menu-item {
+  display: inline-block;
+  margin: 0 10px;
+}
+
+.footer-link {
+  font-size: 0.8rem;
+}
+
+.footer-social {
+  margin-right: 10px;
+}
+
+.footer-social .social-icon {
+  display: inline-block;
+  padding: 10px;
+  margin: 0 5px;
+  background-color: transparent;
+  background-size: contain;
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
+
+.youtube-icon {
+  background-image: url('../../images/youtube-new.png');
+}
+
+.github-icon {
+  background-image: url('../../images/github-new.png');
+}
+
+.instagram-icon {
+  background-image: url('../../images/instagram-new.png');
+}
+
+.podcast-icon {
+  background-image: url('../../images/podcast-new.png');
+}
+
+.feed-icon {
+  background-image: url('../../images/feed-new.png');
+}

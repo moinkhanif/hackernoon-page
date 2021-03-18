@@ -1,0 +1,3 @@
+export const SET_COLOR_SCHEME = 'SET_COLOR_SCHEME';
+export const SET_PRIMARY_NAV = 'SET_PRIMARY_NAV';
+export const SET_LOGIN_STATUS = 'SET_LOGIN_STATUS';

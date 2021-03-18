@@ -1,0 +1,70 @@
+{
+  "top-menu": [
+    {
+      "name": "Help",
+      "link": "https://help.hackernoon.com/"
+    },
+    {
+      "name": "About",
+      "link": "https://about.hackernoon.com/"
+    },
+    {
+      "name": "Sponsor:",
+      "link": "https://sponsor.hackernoon.com/"
+    },
+    {
+      "name": "Brand-as-Author",
+      "link": "https://sponsor.hackernoon.com/#brandasauthor"
+    },
+    {
+      "name": "Sitewide Billboard",
+      "link": "https://sponsor.hackernoon.com/#billboard"
+    },
+    {
+      "name": "Ad by tag",
+      "link": "https://sponsor.hackernoon.com/#adbytag"
+    },
+    {
+      "name": "Newsletter",
+      "link": "https://sponsor.hackernoon.com/#newsletter"
+    },
+    {
+      "name": "Noonies",
+      "link": "https://noonies.tech/sponsor"
+    }
+  ],
+  "bottom-menu": [
+    {
+      "name": "Contact Us",
+      "link": "https://hackernoon.com/contact"
+    },
+    {
+      "name": "Terms",
+      "link": "https://hackernoon.com/terms"
+    },
+    {
+      "name": "Privacy",
+      "link": "https://hackernoon.com/privacy"
+    },
+    {
+      "name": "Cookies",
+      "link": "https://hackernoon.com/cookies"
+    },
+    {
+      "name": "Stories published yesterday",
+      "link": "https://hackernoon.com/archives/yesterday"
+    },
+    {
+      "name": "Leaderboard",
+      "link": "https://leaders.hackernoon.com/"
+    },
+    {
+      "name": "Contributer's Club",
+      "link": "https://community.hackernoon.com/"
+    },
+    {
+      "name": "Chrome Extension",
+      "link": "https://chrome.google.com/webstore/detail/tech-stories-tab-by-hacke/cmcgnandlhnjekeccmongfellpljlohh?hl=en-US"
+    }
+  ]
+}

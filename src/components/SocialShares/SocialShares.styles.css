@@ -1,0 +1,34 @@
+.social-shares {
+  margin-left: 15px;
+}
+
+.social-shares .social-icon {
+  padding: 10px;
+  vertical-align: middle;
+  margin: 0 5px;
+  cursor: pointer;
+  background-color: transparent;
+  background-size: contain;
+  background-repeat: no-repeat;
+  border: none;
+}
+
+.social-icon.twitter-icon {
+  background-image: url('../../images/twitter-new.png');
+}
+
+.social-icon.facebook-icon {
+  background-image: url('../../images/facebook-new.png');
+}
+
+.social-icon.linkedin-icon {
+  background-image: url('../../images/linkedin-new.png');
+}
+
+.social-icon.email-icon {
+  background-image: url('../../images/email-new.png');
+}
+
+.social-label {
+  display: none;
+}
