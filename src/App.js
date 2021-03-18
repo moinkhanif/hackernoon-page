@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
+import AfterContentSignup from './components/AfterContentSignup/AfterContentSignup';
 import './App.css';
 import AppHeader from './components/AppHeader/AppHeader';
 import PostContent from './components/PostContent/PostContent';
@@ -7,6 +8,7 @@ import { setColorScheme, setPrimaryNav } from './redux';
 
 function App() {
   const [scrollValue, setScrollValue] = useState(0);
+  const loginStatus = useSelector(state => state.siteData.loginStatus);
   const [darkColor, setDarkColor] = useState(true);
   const primaryNav = useSelector(state => state.siteData.primaryNav);
   const colorScheme = useSelector(state => state.siteData.colorScheme);
@@ -50,6 +52,7 @@ function App() {
     <div className={`App ${colorScheme}`}>
       <AppHeader />
       <PostContent />
+      { loginStatus ? '' : <AfterContentSignup /> }
     </div>
   );
 }
