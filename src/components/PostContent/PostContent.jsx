@@ -6,6 +6,7 @@ import postData from '../../data/postData.json';
 import './PostContent.styles.css';
 import RelatedContent from '../RelatedContent/RelatedContent';
 import PostTags from '../PostTags/PostTags';
+import PostDetails from '../PostDetails/PostDetails';
 
 const PostContent = () => {
   const [publishedMonth, setPublishedMonth] = useState('');
@@ -64,7 +65,7 @@ const PostContent = () => {
           </div>
         </div>
         <img className="featured-image" src={postData.mainImage} alt="post related main pic" />
-        <div className="post-details" />
+        <PostDetails postMarkup={postData.markup} />
         <div className="bottom-reactions">
           <Reactions reactionsData={postData.reactions} />
         </div>
