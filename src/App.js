@@ -5,6 +5,7 @@ import './App.css';
 import AppHeader from './components/AppHeader/AppHeader';
 import PostContent from './components/PostContent/PostContent';
 import { setColorScheme, setPrimaryNav } from './redux';
+import AppFooter from './components/AppFooter/AppFooter';
 
 function App() {
   const [scrollValue, setScrollValue] = useState(0);
@@ -53,6 +54,7 @@ function App() {
       <AppHeader />
       <PostContent />
       { loginStatus ? '' : <AfterContentSignup /> }
+      <AppFooter />
     </div>
   );
 }
