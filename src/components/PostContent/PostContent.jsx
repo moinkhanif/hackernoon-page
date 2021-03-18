@@ -30,7 +30,6 @@ const PostContent = () => {
   };
 
   useEffect(() => {
-    console.log('load');
     const postDate = new Date(postData.publishedAt * 1000);
     setPublishedMonth(postDate.getMonth() + 1);
     setPublishedDate(postDate.getDate());
